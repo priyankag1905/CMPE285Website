@@ -85,12 +85,13 @@ namespace CMPE285Website.DAL
 		try{
 			
 			command.CommandText = sql;
-			 
-			 for(int i=0;i<param.Length;i++)
-			 {
-				 command.Parameters.Add(param[i]);
-			 }
-
+            if (param != null)
+            {
+                for (int i = 0; i < param.Length; i++)
+                {
+                    command.Parameters.Add(param[i]);
+                }
+            }
 			command.Prepare();
 			adapter.SelectCommand = command;
 			adapter.Fill(ds);

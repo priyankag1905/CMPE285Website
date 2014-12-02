@@ -38,6 +38,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="GMaps">
+      <HintPath>..\packages\Subgurim.Maps.4.1.0.6\lib\net20\GMaps.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="MySql.Data, Version=6.8.3.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -175,6 +178,7 @@
     <Content Include="Content\Site.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Home.aspx" />
+    <Content Include="images\background.png" />
     <Content Include="Login.aspx" />
     <Content Include="Maps.aspx" />
     <Content Include="packages.config" />
@@ -217,6 +221,7 @@
     <Content Include="Global.asax" />
     <Content Include="SignUp.aspx" />
     <Content Include="Site.Master" />
+    <Content Include="MyStyles.css" />
     <Content Include="Subscription.aspx" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Web.config" />
