@@ -179,6 +179,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Home.aspx" />
     <Content Include="images\background.png" />
+    <Content Include="images\icon.png" />
     <Content Include="Login.aspx" />
     <Content Include="Maps.aspx" />
     <Content Include="packages.config" />

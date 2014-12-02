@@ -13,7 +13,10 @@
 
 </head> 
 <body> 
-    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:cmpe285ConnectionString %>" ProviderName="<%$ ConnectionStrings:cmpe285ConnectionString.ProviderName %>" SelectCommand="SELECT `hName` as `Name`, `hLat` as `Latitude`, `hlong` as `longitude`, `haddress` as `description` FROM `cmpe285`.`HOSPITAL` where hLat NOT LIKE '?%'"></asp:SqlDataSource>
+    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:cmpe285ConnectionString %>" ProviderName="<%$ ConnectionStrings:cmpe285ConnectionString.ProviderName %>" SelectCommand="SELECT address as `Name`,lat as `latitude`,`long` as `Longitude` from USER_DETAILS where uid=1
+ 
+union 
+SELECT `hName` as `Name`, `hLat` as `Latitude`, `hlong` as `longitude` FROM `cmpe285`.`HOSPITAL` where hLat NOT LIKE '?%'"></asp:SqlDataSource>
     <asp:Repeater ID="rptMarkers" runat="server" DataSourceID="SqlDataSource1">
         <ItemTemplate><div class="hiddenDiv">
                     <%#Eval("Name") %>:::<%#Eval("Latitude") %>:::<%#Eval("Longitude") %></div>
@@ -31,6 +34,7 @@
            c.lng = divArr[2];
            markers.push(c);
        });
+       var image = 'images/icon.png';
 </script>
 <script type="text/javascript">
     window.onload = function () {
@@ -46,11 +50,21 @@
         for (i = 0; i < markers.length; i++) {
             var data = markers[i]
             var myLatlng = new google.maps.LatLng(data.lat, data.lng);
-            var marker = new google.maps.Marker({
-                position: myLatlng,
-                map: map,
-                title: data.title
-            });
+            if (i == 0) {
+                var marker = new google.maps.Marker({
+                    position: myLatlng,
+                    map: map,
+                    icon:image,
+                    title: data.title
+                });
+            }
+            else {
+                var marker = new google.maps.Marker({
+                    position: myLatlng,
+                    map: map,
+                    title: data.title
+                });
+            }
             (function (marker, data) {
                 google.maps.event.addListener(marker, "click", function (e) {
                     infoWindow.setContent(data.description);
