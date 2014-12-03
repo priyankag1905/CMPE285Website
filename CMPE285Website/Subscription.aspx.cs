@@ -14,7 +14,7 @@ namespace CMPE285Website
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Session["userid"] == null) Session.Add("userid", 1);
+            if (Session["userid"] == null) Response.Redirect("Login.aspx");
         }
 
         protected void btnSubscribe_Click(object sender, EventArgs e)

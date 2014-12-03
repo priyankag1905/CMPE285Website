@@ -27,7 +27,10 @@ namespace CMPE285Website
             param[1].Value = txtPassword.Text;
             DataTable dt = dbm.fetchRows("Select uid from `cmpe285`.`USER_DETAILS` where emailid=@EmailId and pwd=@Password", param);
             if (dt.Rows.Count == 0) lblMessage.Text = "Invalid login credentials";
-            else { Session.Add("userid", dt.Rows[0][0].ToString()); }
+            else { 
+                Session.Add("userid", dt.Rows[0][0].ToString());
+                Response.Redirect("Home.aspx");
+            }
         }
     }
 }

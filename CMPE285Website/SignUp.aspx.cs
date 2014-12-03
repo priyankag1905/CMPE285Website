@@ -48,7 +48,26 @@ namespace CMPE285Website
             param1[0] = new MySqlParameter("@emailid",MySqlDbType.VarChar);
             DataTable dt = dbm1.fetchRows("select uid from `cmpe285`.`USER_DETAILS` where emailID=@emailid", param1);
             if (dt == null) lblMessage.Text = "SignUp failed";
-            else Session.Add("userid", dt.Rows[0][0].ToString());
+            else
+            {
+                Session.Add("userid", dt.Rows[0][0].ToString());
+                DBManager dbm2 = new DBManager();
+                String query2 = "INSERT INTO `cmpe285`.`MEDICAL_ER` (`bGrp`,`allergies`,`insPvdr`,`insID`,`uID`) "+
+                    "VALUES(@bgrp,@allergies,@iprovider,@iid,@uid)";
+                MySqlParameter[] param2 = new MySqlParameter[5];
+                param2[0] = new MySqlParameter("@bgrp", MySqlDbType.VarChar);
+                param2[0].Value = txtBgrp.Text;
+                param2[1] = new MySqlParameter("@allergies", MySqlDbType.VarChar);
+                param2[1].Value = txtAllergies.Text;
+                param2[2] = new MySqlParameter("@iprovider", MySqlDbType.VarChar);
+                param2[2].Value = txtIProvider.Text;
+                param2[3] = new MySqlParameter("@iid", MySqlDbType.VarChar);
+                param2[3].Value = txtIId.Text;
+                param2[4] = new MySqlParameter("@uid", MySqlDbType.Int32);
+                param2[4].Value = Convert.ToInt32(Session["userid"].ToString());
+                dbm.executeDDL(query2, param2);
+                Response.Redirect("Home.aspx");
+            }
             
         }
     }

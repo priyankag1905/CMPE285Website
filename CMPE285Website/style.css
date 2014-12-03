@@ -1,0 +1,162 @@
+body {
+margin : 0;
+padding : 0;
+font : 73% "Trebuchet MS", "lucida sans", arial, helvetica, sans-serif;
+background : #f1f1e3;
+line-height : 1.8em;
+}
+		/*HEADER */
+#header {
+height : 150px;
+margin-bottom : 2em;
+background : #777750 url(images/header.jpg) no-repeat;
+}
+#header h1 {
+float : right;
+margin : 0;
+padding : 0.5em 1em 0 0;
+font-size : 160%;
+letter-spacing : 5px;
+color : #333;
+background : transparent;
+}
+		/*TOP MENU */
+#menu {
+height : 95px;
+margin : 0;
+padding : 0;
+list-style-type : none;
+list-style-image : none;
+text-transform : uppercase;
+}
+#menu li {
+float : left;
+width : 7em;
+border-right : 1px solid #777750;
+}
+#menu a {
+display : block;
+height : 95px;
+width : 7em;
+padding : 50px 0 0;
+text-decoration : none;
+font-weight : bold;
+line-height : 95px;
+text-align : center;
+color : #333;
+background : #cccc9a;
+}
+#menu a:hover {
+text-decoration : none;
+color : #fff;
+background : #999967;
+}
+		/*3 COLUMN LAYOUT */
+#gutter {
+float : left;
+width : 3%;
+height : 1px;
+}
+
+#col1 {
+float : left;
+width : 42%;
+margin-bottom : 1em;
+border-right : 1px solid #ccc;
+padding-right : 3%;
+}
+#col2 {
+float : left;
+width : 19%;
+margin-left : 3%;
+margin-bottom : 1em;
+border-right : 0 solid #999;
+padding-right : 3%;
+}
+#col3 {
+float : left;
+width : 19%;
+margin-left : 3%;
+margin-bottom : 1em;
+}
+#col4 {
+float : left;
+width : 38%;
+margin-left : 3%;
+margin-bottom : 1em;
+}
+		/*FOOTER */
+#footer {
+clear : both;
+height : 50px;
+border-top : 1px solid #ccc;
+padding : 0.5em;
+text-align : left;
+}
+
+		/*ROUNDED CORNERS */
+.box {
+background : #cccc9a;
+color : #777750;
+text-align : center;
+font-weight : bold;
+}
+.boxtop {
+background : url(images/ne.gif) no-repeat top right;
+}
+.boxtop div {
+height : 10px;
+background : url(images/nw.gif) no-repeat top left;
+}
+.boxbottom {
+background : url(images/se.gif) no-repeat bottom right;
+}
+.boxbottom div {
+height : 10px;
+background : url(images/sw.gif) no-repeat bottom left;
+}
+.boxcontent {
+padding : 0 10px 0 10px;
+}
+		/*TYPOGRAPHY */
+h2 {
+margin-top : 0;
+font-size : 150%;
+text-transform : uppercase;
+letter-spacing : 3px;
+border-bottom : 1px solid #ccc;
+color : #666;
+background : inherit;
+}
+h3 {
+margin-top : 0;
+font-size : 175%;
+text-transform : uppercase;
+letter-spacing : 3px;
+color : #666;
+background : inherit;
+}
+blockquote {
+font-weight : bold;
+font-style : italic;
+color : #777850;
+}
+		/*LINKS */
+a:link, a:visited {
+color : #9b696f;
+background : inherit;
+text-decoration : underline;
+}
+a:hover {
+color : #777750;
+background : inherit;
+text-decoration : none;
+}
+a:active {
+color : #666;
+background : inherit;
+text-decoration : none;
+}
+a img {
+border : 0;
+}

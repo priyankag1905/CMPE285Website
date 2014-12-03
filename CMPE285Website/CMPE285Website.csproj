@@ -178,10 +178,21 @@
     <Content Include="Content\Site.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Home.aspx" />
+    <Content Include="images\articles.png" />
     <Content Include="images\background.png" />
+    <Content Include="images\docs.png" />
+    <Content Include="images\header.jpg" />
     <Content Include="images\icon.png" />
+    <Content Include="images\mail.png" />
+    <Content Include="images\ne.gif" />
+    <Content Include="images\nw.gif" />
+    <Content Include="images\photos.png" />
+    <Content Include="images\se.gif" />
+    <Content Include="images\speech-bubble.png" />
+    <Content Include="images\sw.gif" />
     <Content Include="Login.aspx" />
     <Content Include="Maps.aspx" />
+    <Content Include="MedicalInfo.aspx" />
     <Content Include="packages.config" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
@@ -223,6 +234,7 @@
     <Content Include="SignUp.aspx" />
     <Content Include="Site.Master" />
     <Content Include="MyStyles.css" />
+    <Content Include="style.css" />
     <Content Include="Subscription.aspx" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Web.config" />
@@ -393,6 +405,13 @@
     </Compile>
     <Compile Include="Maps.aspx.designer.cs">
       <DependentUpon>Maps.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MedicalInfo.aspx.cs">
+      <DependentUpon>MedicalInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MedicalInfo.aspx.designer.cs">
+      <DependentUpon>MedicalInfo.aspx</DependentUpon>
     </Compile>
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
