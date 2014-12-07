@@ -1,21 +1,34 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Maps.aspx.cs" Inherits="CMPE285Website.Maps" %>
+<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Maps.aspx.cs" Inherits="CMPE285Website.Maps" %>
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
+
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
- <meta http-equiv="content-type" content="text/html; charset=UTF-8" /> 
-    <title>Google Map</title>
-
+    <title>Emerge</title>
+    <meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+    <link href="style.css" rel="stylesheet" type="text/css" />
     <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
-
     <script src="Scripts/jquery-1.10.2.min.js" type="text/javascript"></script>
-
     <script src="Scripts/googlemap.js" type="text/javascript"></script>
-
     <script src="Scripts/jquery.tablednd.js" type="text/javascript"></script>
-
 </head>
 <body>
+   
+<div id="header">
+  <ul id="menu">
+    <li class="menupadding"><a href="Home.aspx">Home</a></li>
+      <li class="menupadding"><a href="Login.aspx">Login</a></li>
+    <li class="menupadding"><a href="SignUp.aspx">SignUp</a></li>
+    <li class="menupadding"><a href="Subscription.aspx">Subscription</a></li>
+    <li class="menupadding"><a href="Maps.aspx">Maps</a></li>
+    <li class="menupadding"><a href="#">Contact</a></li>
+  </ul>
+  <h1><span style="color: #CCCC9A;font-size:40px"> Emerge</span> </h1>
+</div>
+<div id="gutter"></div>
+<div id="col1">
+  <h2>Maps on <span style="font-weight:bold; color:#333;">Emerge</span></h2>
+     
 <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:cmpe285ConnectionString %>" ProviderName="<%$ ConnectionStrings:cmpe285ConnectionString.ProviderName %>" SelectCommand="SELECT address as `Name`,lat as `latitude`,`longitude` as `Longitude` from USER_DETAILS where uid=1
  
 union 
@@ -120,11 +133,6 @@ SELECT `hName` as `Name`, `hLat` as `Latitude`, `hlong` as `longitude` FROM `cmp
     cellpadding="3" cellspacing="0">
 </table>
 </div>
-
-<script type="text/javascript" language="javascript">
-    
-    </script>
-    </form>
-    
+</form>
 </body>
 </html>

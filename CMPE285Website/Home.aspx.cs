@@ -121,8 +121,8 @@ namespace CMPE285Website
             DataTable dt = dbm.fetchRows("select eEmailID,fname,lname,phno,address from cmpe285.USER_DETAILS where uID=@uID", param);
             string email = dt.Rows[0][0].ToString();
             string name = dt.Rows[0][1].ToString() + " " + dt.Rows[0][2];
-            string phno = dt.Rows[0][2].ToString();
-            string address = dt.Rows[0][3].ToString();
+            string phno = dt.Rows[0][3].ToString();
+            string address = dt.Rows[0][4].ToString();
             MailServer mail = new MailServer();
             mail.sendMail(email, "Help!!", "You are the registered emergency contact for " + name + ". The person is in need of help. Please contact immediately at Ph." + phno + "\nAddress" + address);
             System.Text.StringBuilder sb = new System.Text.StringBuilder();
