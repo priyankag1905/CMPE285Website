@@ -46,6 +46,7 @@ namespace CMPE285Website
             DBManager dbm1 = new DBManager();
             MySqlParameter[] param1 = new MySqlParameter[1];
             param1[0] = new MySqlParameter("@emailid",MySqlDbType.VarChar);
+            param1[0].Value = txtEmail.Text;
             DataTable dt = dbm1.fetchRows("select uid from `cmpe285`.`USER_DETAILS` where emailID=@emailid", param1);
             if (dt == null) lblMessage.Text = "SignUp failed";
             else

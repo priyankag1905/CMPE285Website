@@ -87,7 +87,7 @@
             <td><asp:TextBox ID="txtIId" runat="server"></asp:TextBox></td>
         </tr>
     </table>
-        <asp:Button ID="btnSignUp" runat="server" Text="Button" OnClick="btnSignUp_Click" />
+        <asp:Button ID="btnSignUp" runat="server" Text="Sign Up" OnClick="btnSignUp_Click" />
         <asp:Label ID="lblMessage" ForeColor="Red" runat="server" Text=""></asp:Label>
     </div>
         </div>
